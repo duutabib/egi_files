@@ -78,7 +78,7 @@ for layer_index in range(len(model.layers[:780])):
 	plt.ylabel('auRoC')
 	plt.grid(True)
 	plt.title('InceptionResNetV2'+str(model.layers[layer_index].name)+': layer '+str(layer_index) )
-	plt.savefig('/0/abib/cluster_inceptionresnet_plots/inceptionresnetlayer_'+str(layer_index)+'.png')
+	plt.savefig('./cluster_inceptionresnet_plots/inceptionresnetlayer_'+str(layer_index)+'.png')
 	max_auc= max(auc_filters)	
 
 plt.plot(max_auc, 'b-')
@@ -86,11 +86,11 @@ plt.xlabel('Layer Index')
 plt.ylabel('auRoC')
 plt.grid(True)
 plt.title(' Xception Layer ' )
-plt.savefig('/0/abib/cluster_inceptionresnet_plots/inceptionresnetlayer_maxauc.png')
+plt.savefig('./cluster_inceptionresnet_plots/inceptionresnetlayer_maxauc.png')
 
 
 #write the time taken to file.
 t_taken= time.time()- start
-fh = open("/0/abib/cluster_inceptionresnet_plots/time_taken.txt","w")
+fh = open("./cluster_inceptionresnet_plots/time_taken.txt","w")
 fh.write(t_taken)
 fh.close()
