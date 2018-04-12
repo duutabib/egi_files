@@ -40,7 +40,7 @@ dis= np.zeros((n_images, 224, 224, 3))
 
 for i in range(100):
 
-	img_path = '/0/abib/figures/circlefeature/feature_'+str(i+1)+'.png'
+	img_path = './figures/circlefeature/feature_'+str(i+1)+'.png'
 	img = image.load_img(img_path, target_size=(224, 224))
 	img = image.img_to_array(img)
 	img =np.expand_dims(img, axis=0)
@@ -48,7 +48,7 @@ for i in range(100):
 
 for k in range(100):
 
-	img_path = '/0/abib/figures/nonfeature/nofeature_'+str(k+1)+'.png'
+	img_path = './figures/nonfeature/nofeature_'+str(k+1)+'.png'
 	img = image.load_img(img_path, target_size=(224, 224))
 	img = image.img_to_array(img)
 	img =np.expand_dims(img, axis=0)
